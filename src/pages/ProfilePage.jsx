@@ -29,7 +29,7 @@ const ProfilePage = () => {
                 .from('emp_profile')
                 .select('*')
                 .eq('id', user.id)
-                .single();
+                .maybeSingle();
 
             if (error) throw error;
             if (data) {

@@ -57,7 +57,15 @@ const DashboardPage = () => {
                         'Authorization': `Bearer ${token}`
                     }
                 });
-                if (!res.ok) throw new Error(`Fetch ${table} failed: ${res.statusText}`);
+                if (!res.ok) {
+                    // Start of Selection
+                    if (res.status === 404) {
+                        console.warn(`Table ${table} not found (404), returning empty list.`);
+                        return [];
+                    }
+                    // End of Selection
+                    throw new Error(`Fetch ${table} failed: ${res.statusText}`);
+                }
                 return res.json();
             };
 
