@@ -1,0 +1,49 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    /* Important for flexbox overflow */
+    transition: margin-left 0.3s ease;
+}
+
+.content {
+    flex: 1;
+    padding: 32px;
+    background-color: var(--scaffold-bg);
+}
+
+.sidebarWrapper {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0;
+    }
+
+    .sidebarWrapper :global(.Sidebar_sidebar__1j3k5) {
+        /* This depends on generated class, better use direct classes or context */
+        transform: translateX(-100%);
+    }
+
+    .sidebarWrapper.open :global(.Sidebar_sidebar__1j3k5) {
+        transform: translateX(0);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 95;
+    }
+}

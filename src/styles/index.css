@@ -1,0 +1,85 @@
+:root {
+  --primary-blue: #2563eb;
+  --light-blue: rgba(37, 99, 235, 0.1);
+  --lightest-blue: rgba(37, 99, 235, 0.2);
+  
+  --scaffold-bg: #f9fafb;
+  --card-bg: #ffffff;
+  --soft-grey-bg: #f3f4f6;
+  
+  --primary-text: #111827;
+  --secondary-text: #6b7280;
+  --muted-text: #9ca3af;
+  
+  --border-grey: #e5e7eb;
+  --shadow-grey: rgba(0, 0, 0, 0.05);
+  
+  --success-green: #16a34a;
+  --warning-orange: #f59e0b;
+  --danger-red: #dc2626;
+
+  --sidebar-width: 260px;
+  --navbar-height: 64px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--scaffold-bg);
+  color: var(--primary-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px var(--shadow-grey), 0 2px 4px -1px var(--shadow-grey);
+  border: 1px solid var(--border-grey);
+}
+
+.container {
+  padding: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}

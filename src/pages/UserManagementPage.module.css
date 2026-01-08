@@ -1,0 +1,292 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 4px;
+}
+
+.header p {
+    color: var(--secondary-text);
+}
+
+.addBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.addBtn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.searchBox {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-grey);
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: var(--muted-text);
+}
+
+.searchBox input {
+    border: none;
+    background: none;
+    width: 100%;
+    font-size: 0.9375rem;
+    color: var(--primary-text);
+    outline: none;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-grey);
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+.filterIcon {
+    color: var(--muted-text);
+}
+
+.roleSelect {
+    border: none;
+    background: none;
+    font-weight: 600;
+    color: var(--secondary-text);
+    outline: none;
+    cursor: pointer;
+}
+
+.tableCard {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--border-grey);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px var(--shadow-grey);
+}
+
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding: 16px 24px;
+    background-color: var(--soft-grey-bg);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-grey);
+    vertical-align: middle;
+}
+
+.userCell {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.userName {
+    font-weight: 600;
+    color: var(--primary-text);
+    margin-bottom: 2px;
+}
+
+.userId {
+    font-size: 0.75rem;
+    color: var(--muted-text);
+}
+
+.roleBadge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.employee {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+}
+
+.productionmanager {
+    background-color: rgba(255, 138, 0, 0.1);
+    color: #ff8a00;
+}
+
+.marketingmanager {
+    background-color: rgba(123, 63, 242, 0.1);
+    color: #7b3ff2;
+}
+
+.owner {
+    background-color: rgba(15, 191, 117, 0.1);
+    color: #0fbf75;
+}
+
+.positionText {
+    font-size: 0.8125rem;
+    color: var(--secondary-text);
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    color: var(--secondary-text);
+    margin-bottom: 4px;
+}
+
+.contactItem svg {
+    color: var(--muted-text);
+}
+
+.dateText {
+    font-size: 0.875rem;
+    color: var(--primary-text);
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.editBtn,
+.deleteBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.editBtn {
+    color: var(--primary-blue);
+    background-color: var(--light-blue);
+}
+
+.editBtn:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.deleteBtn {
+    color: var(--danger-red);
+    background-color: rgba(220, 38, 38, 0.05);
+}
+
+.deleteBtn:hover {
+    background-color: var(--danger-red);
+    color: white;
+}
+
+.loadingState {
+    padding: 80px;
+    text-align: center;
+    color: var(--secondary-text);
+}
+
+.spinner {
+    animation: rotate 1s linear infinite;
+    margin-bottom: 12px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.emptyRow {
+    padding: 40px !important;
+    text-align: center;
+    color: var(--muted-text);
+}
+
+@media (max-width: 1024px) {
+    .contactCell {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .addBtn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

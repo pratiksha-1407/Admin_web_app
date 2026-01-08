@@ -1,0 +1,204 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary-text);
+    font-weight: 500;
+    width: fit-content;
+}
+
+.backBtn:hover {
+    color: var(--primary-blue);
+}
+
+.header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+.formCard {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--border-grey);
+    padding: 32px;
+    box-shadow: 0 4px 6px -1px var(--shadow-grey);
+}
+
+.section {
+    margin-bottom: 32px;
+}
+
+.sectionTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    position: absolute;
+    left: 12px;
+    color: var(--muted-text);
+}
+
+.inputWrapper input,
+.inputWrapper select,
+.inputGroup select {
+    width: 100%;
+    padding: 10px 12px 10px 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border-grey);
+    background-color: var(--soft-grey-bg);
+    font-size: 0.9375rem;
+    color: var(--primary-text);
+    transition: all 0.2s ease;
+}
+
+/* For selects that don't have wrappers with icons */
+.inputGroup select {
+    padding-left: 12px;
+}
+
+.inputWrapper input:focus,
+.inputWrapper select:focus,
+.inputGroup select:focus {
+    border-color: var(--primary-blue);
+    background-color: white;
+    outline: none;
+    box-shadow: 0 0 0 3px var(--light-blue);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-grey);
+}
+
+.cancelBtn {
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--secondary-text);
+    background-color: var(--soft-grey-bg);
+    transition: all 0.2s ease;
+}
+
+.cancelBtn:hover {
+    background-color: var(--border-grey);
+}
+
+.saveBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: var(--primary-blue);
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.saveBtn:hover:not(:disabled) {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.saveBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.errorBanner {
+    background-color: #fef2f2;
+    border: 1px solid #fee2e2;
+    color: var(--danger-red);
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.loadingContainer {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--secondary-text);
+}
+
+.spinner {
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancelBtn,
+    .saveBtn {
+        width: 100%;
+        justify-content: center;
+    }
+}
